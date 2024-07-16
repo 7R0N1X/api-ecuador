@@ -1,11 +1,14 @@
 const express = require('express')
+const path = require('path')
 const mongoose = require('mongoose')
 const app = express()
 const countryRoutes = require('./routes/countryRoutes')
 
 mongoose.connect('mongodb://localhost:27017/api-ecuador')
-  .then(() => console.log('Base de datos conectada'))
-  .catch(err => console.log(err));
+.then(() => console.log('Base de datos conectada'))
+.catch(err => console.log(err));
+
+app.use('/public', express.static(path.join(__dirname, '../public')));
 
 app.use('/api/country', countryRoutes)
 

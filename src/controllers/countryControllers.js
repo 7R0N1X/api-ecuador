@@ -18,8 +18,8 @@ exports.createInfo = async (req, res) => {
       subRegion: "América del Sur",
       region: "Americas",
       borders: ["Colombia", "Perú", "Océano Pacífico"],
-      flag: "test",
-      shield: "test"
+      flag: `${req.protocol}://${req.get('host')}/public/country/flag/ecuador.svg`,
+      shield: `${req.protocol}://${req.get('host')}/public/country/shield/ecuador.svg`
     });
     await ecuadorInfo.save()
     res.status(201).json(ecuadorInfo)
