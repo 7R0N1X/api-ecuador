@@ -17,6 +17,6 @@ app.use('/', (req, res) => {
 
 app.use('/api/country', countryRoutes)
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Servidor activo en el puerto 3000`);
+app.listen(process.env.PORT, () => {
+  console.log(`Servidor activo en el puerto ${process.env.PORT}`);
 })
