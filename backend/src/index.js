@@ -11,6 +11,8 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.log(err));
 
 app.use('/public', express.static(path.join(__dirname, '../public')));
+app.use('/', express.static(path.join(__dirname, '../public/web')));
+
 app.use('/api/country', countryRoutes);
 app.use('/api/presidents', presidentRoutes);
 
