@@ -11,6 +11,10 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use('/public', express.static(path.join(__dirname, '../public')));
 
+app.use('/', (req, res) => {
+  res.send('Bienvenido a API Ecuador')
+})
+
 app.use('/api/country', countryRoutes)
 
 app.listen(process.env.PORT || 3000, () => {
