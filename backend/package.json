@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon --ext ts --exec ts-node src/index.ts",
     "build": "tsc",
     "start": "node dist/server.js"
   },
@@ -16,6 +16,7 @@
     "@types/node": "^22.13.4",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   },
   "dependencies": {
