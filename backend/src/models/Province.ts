@@ -13,6 +13,7 @@ export const Province = sequelize.define(
     },
     name: { type: DataTypes.STRING, allowNull: false, unique: true },
     capital_id: { type: DataTypes.INTEGER, allowNull: true },
+    region_id: { type: DataTypes.INTEGER, allowNull: true },
   },
   { tableName: "provinces", timestamps: false }
 );
