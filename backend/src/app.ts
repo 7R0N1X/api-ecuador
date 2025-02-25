@@ -1,11 +1,12 @@
 import express from "express";
-import { regionRoutes } from "./routes/region.routes";
-import { provinceRoutes } from "./routes/province.routes";
-import { cantonRoutes } from "./routes/canton.routes";
-import { parishRoutes } from "./routes/parish.routes";
-import { countryRoutes } from "./routes/country.routes";
-import { languageRoutes } from "./routes/language.routes";
-import { borderRoutes } from "./routes/border.routes";
+import { countryRoutes } from "./routes/v1/country.routes";
+import { borderRoutes } from "./routes/v1/border.routes";
+import { languageRoutes } from "./routes/v1/language.routes";
+import { regionRoutes } from "./routes/v1/region.routes";
+import { provinceRoutes } from "./routes/v1/province.routes";
+import { cantonRoutes } from "./routes/v1/canton.routes";
+import { parishRoutes } from "./routes/v1/parish.routes";
+
 
 export const app = express();
 
@@ -13,10 +14,10 @@ export const app = express();
 app.use(express.json());
 
 // Rutas
-app.use("/api", countryRoutes);
-app.use("/api", borderRoutes);
-app.use("/api", languageRoutes);
-app.use("/api", regionRoutes);
-app.use("/api", provinceRoutes);
-app.use("/api", cantonRoutes);
-app.use("/api", parishRoutes);
+app.use("/api/v1/country/ecuador", countryRoutes);
+app.use("/api/v1/country/ecuador", borderRoutes);
+app.use("/api/v1/country/ecuador", languageRoutes);
+app.use("/api/v1/country/ecuador", regionRoutes);
+app.use("/api/v1/country/ecuador", provinceRoutes);
+app.use("/api/v1/country/ecuador", cantonRoutes);
+app.use("/api/v1/country/ecuador", parishRoutes);
