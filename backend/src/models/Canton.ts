@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/db";
 import { Parish } from "./Parish";
+import { Country } from "./Country";
 
 export const Canton = sequelize.define(
   "Canton",
@@ -22,3 +23,6 @@ export const Canton = sequelize.define(
 
 Canton.hasMany(Parish, { foreignKey: "canton_id", sourceKey: "id" });
 Parish.belongsTo(Canton, { foreignKey: "canton_id", targetKey: "id" });
+
+Canton.hasOne(Country, { foreignKey: "capital_id", sourceKey: "id" });
+Country.belongsTo(Canton, { foreignKey: "capital_id", targetKey: "id" });
