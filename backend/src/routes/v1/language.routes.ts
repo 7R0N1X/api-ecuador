@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { getLanguages } from "../controllers/language.controller";
+import { getLanguages } from "../../controllers/v1/language.controller";
 
 export const languageRoutes = Router();
 
-languageRoutes.get("/country/ecuador/languages", async (req, res) => {
+languageRoutes.get("/languages", async (req, res) => {
   const languages = await getLanguages();
   res.json(languages);
-})
+});

@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { getRegions } from "../controllers/region.controller";
+import { getRegions } from "../../controllers/v1/region.controller";
 
 export const regionRoutes = Router();
 
-regionRoutes.get("/country/ecuador/regions", async (req, res) => {
+regionRoutes.get("/regions", async (req, res) => {
   const regions = await getRegions();
   res.json(regions);
 });

@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import { sequelize } from "../config/db";
+import { sequelize } from "../../config/db";
 import { Languages } from "./Languages";
 import { Border } from "./Border";
 

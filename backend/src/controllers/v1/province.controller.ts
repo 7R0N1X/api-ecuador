@@ -1,5 +1,5 @@
-import { Canton } from "../models/Canton";
-import { Province } from "../models/Province";
+import { Canton } from "../../models/v1/Canton";
+import { Province } from "../../models/v1/Province";
 
 export const getProvinces = async () => {
   return await Province.findAll({

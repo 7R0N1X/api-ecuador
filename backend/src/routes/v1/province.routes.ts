@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { getProvinces } from "../controllers/province.controller";
+import { getProvinces } from "../../controllers/v1/province.controller";
 
 export const provinceRoutes = Router();
 
-provinceRoutes.get("/provincias", async (req, res) => {
+provinceRoutes.get("/provinces", async (req, res) => {
   const parishes = await getProvinces();
   res.json(parishes);
 });
