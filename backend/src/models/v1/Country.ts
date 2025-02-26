@@ -1,7 +1,7 @@
+import { Border } from "./Border";
+import { Languages } from "./Languages";
 import { DataTypes } from "sequelize";
 import { sequelize } from "../../config/db";
-import { Languages } from "./Languages";
-import { Border } from "./Border";
 
 export const Country = sequelize.define(
   "country",
@@ -27,4 +27,4 @@ Country.hasMany(Languages, { foreignKey: "country_id", sourceKey: "id" });
 Languages.belongsTo(Country, { foreignKey: "country_id", targetKey: "id" as "languages" });
 
 Country.hasMany(Border, { foreignKey: "country_id", sourceKey: "id" });
-Border.belongsTo(Country, { foreignKey: "country_id", targetKey: "id" });
+Border.belongsTo(Country, { foreignKey: "country_id", targetKey: "id", as: "borders" });
