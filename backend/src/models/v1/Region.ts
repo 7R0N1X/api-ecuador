@@ -1,6 +1,6 @@
+import { Province } from "./Province";
 import { DataTypes } from "sequelize";
 import { sequelize } from "../../config/db";
-import { Province } from "./Province";
 
 export const Region = sequelize.define(
   "Region",
@@ -8,6 +8,7 @@ export const Region = sequelize.define(
     id: { type: DataTypes.INTEGER, primaryKey: true, allowNull: false, autoIncrement: true },
     name: { type: DataTypes.STRING, allowNull: false, unique: true },
     description: { type: DataTypes.TEXT, allowNull: false },
+    country_id: { type: DataTypes.INTEGER, allowNull: true },
   },
   { tableName: "regions", timestamps: false }
 );
