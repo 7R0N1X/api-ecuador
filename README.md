@@ -48,20 +48,20 @@ La API estará disponible en http://localhost:3000.
 
 ### Información General
 
-| Método | Endpoint                          | Descripción          |
-| ------ | --------------------------------- | -------------------- |
-| GET    | /api/v1/country/ecuador           | Información del país |
-| GET    | /api/v1/country/ecuador/borders   | Fronteras de Ecuador |
-| GET    | /api/v1/country/ecuador/languages | Lista de idiomas     |
+| Método | Endpoint                          | Descripción          | Acciones                                                                                                                            |
+| ------ | --------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | /api/v1/country/ecuador           | Información del país | <a href="https://api-ecuador.onrender.com/api/v1/country/ecuador" target="_blank" rel="noopener noreferrer">Probar</a>              |
+| GET    | /api/v1/country/ecuador/borders   | Fronteras de Ecuador | <a href="https://api-ecuador.onrender.com/api/v1/country/ecuador/borders" target="_blank" rel="noopener noreferrer">Probar</a>      |
+| GET    | /api/v1/country/ecuador/languages | Lista de idiomas     | <a href="https://api-ecuador.onrender.com/api/v1/country/ecuador/languages" target="_blank" rel="noopener noreferrer">Probar</a>    |
 
 ### División Administrativa
 
-| Método | Endpoint                          | Descripción         |
-| ------ | --------------------------------- | ------------------- |
-| GET    | /api/v1/country/ecuador/regions   | Lista de regiones   |
-| GET    | /api/v1/country/ecuador/provinces | Lista de provincias |
-| GET    | /api/v1/country/ecuador/cantons   | Lista de cantones   |
-| GET    | /api/v1/country/ecuador/parishes  | Lista de parroquias |
+| Método | Endpoint                          | Descripción          | Acciones                                                                                                                            |
+| ------ | --------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | /api/v1/country/ecuador/regions   | Lista de regiones   | <a href="https://api-ecuador.onrender.com/api/v1/country/ecuador/regions" target="_blank" rel="noopener noreferrer">Probar</a>       |
+| GET    | /api/v1/country/ecuador/provinces | Lista de provincias | <a href="https://api-ecuador.onrender.com/api/v1/country/ecuador/provinces" target="_blank" rel="noopener noreferrer">Probar</a>     |
+| GET    | /api/v1/country/ecuador/cantons   | Lista de cantones   | <a href="https://api-ecuador.onrender.com/api/v1/country/ecuador/cantons" target="_blank" rel="noopener noreferrer">Probar</a>       |
+| GET    | /api/v1/country/ecuador/parishes  | Lista de parroquias | <a href="https://api-ecuador.onrender.com/api/v1/country/ecuador/parishes" target="_blank" rel="noopener noreferrer">Probar</a>      |
 
 ## Tecnologías Utilizadas
 
