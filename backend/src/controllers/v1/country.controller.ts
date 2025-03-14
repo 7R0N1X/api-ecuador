@@ -7,7 +7,7 @@ export const getCountry = async () => {
   return await Country.findOne({
     attributes: { exclude: ["capital_id"] },
     include: [
-      { model: Canton, as: "capital", attributes: ["id", "name"] },
+      { model: Canton, as: "capital", attributes: ["name"] },
       { model: Border, as: "borders", attributes: ["id", "name"] },
       { model: Languages, as: "languages", separate: true, attributes: ["id", "name"] },
     ],
